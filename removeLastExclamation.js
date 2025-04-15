@@ -10,7 +10,7 @@
 
 function remove(string) {
     while (string.endsWith('!')) {
-      string = string.slice(0, -1);
+      string = string.slice(0, -1); //updating string
     }
     return string;
   }
@@ -20,7 +20,7 @@ function remove(string) {
 
 //OTHER SOLUTION
 function remove(s){
-    while (s[s.length - 1] === '!') {
+    while (s[s.length - 1] === '!') { //Use if 👉🏼 remove one ! Use while 👉🏼 remove all ! at the end because while loops and we don't know how many ! a word may have
       s = s.slice(0, -1);
     }
     return s;
@@ -62,3 +62,12 @@ function remove(s){
 //   $ — anchors the match to the end of the string.
   
 //   🟡 So together: /!+$/ matches one or more exclamation marks at the end of the string.  
+
+
+// /!+$/ → this pattern means:
+
+// !+ → one or more exclamation marks
+
+// $ → at the end of the string
+
+// So it finds and removes any number of !s that are only at the end.
