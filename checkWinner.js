@@ -20,11 +20,17 @@ function quote(fighter) {
     }
   };
 
-  function quote(fighter) {
-    //need an if statement to check who winner is
-    if(fighter.toLowerCase() === 'george saint pierre'){ 
-      return "I am not impressed by your performance."
-    } else if(fighter.toLowerCase() === 'conor mcgregor'){
-      return "I'd like to take this chance to apologize.. To absolutely NOBODY!"
-    }
-  };  
+function quote(fighter) {
+  //need an if statement to check who winner is
+  if(fighter.toLowerCase() === 'george saint pierre'){ 
+    return "I am not impressed by your performance."
+  } else if(fighter.toLowerCase() === 'conor mcgregor'){
+    return "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+  }
+}; 
+
+function quote(fighter){
+  fighter = fighter.toLowerCase()
+  return fighter === "george saint pierre" ? "I am not impressed by your performance." : 
+  "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+}
