@@ -22,8 +22,7 @@ function smash (words) {
 
 //BEST SOLUTION
 function smash (words) {
-      
-  words = words.join(' ')
-      
-  return words    
+
+  return words.join(' ') 
+   
 };
