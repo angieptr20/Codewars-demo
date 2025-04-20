@@ -8,9 +8,9 @@ function findNeedle(haystack) {
     for (let i = 0; i < haystack.length; i++) {
       if (haystack[i] === 'needle') {
         return `found the needle at position ${i}`;
-      }
     }
   }
+}
 
 console.log(findNeedle(['apple', 'book', 'needle', 'hat'])); // Output: "found the needle at position 2"
   
@@ -31,7 +31,7 @@ function findNeedle(haystack) {
 function findNeedle(haystack) {
     const index = haystack.findIndex(item => item === 'needle');  //In arrow functions, if you don't use curly braces {}, the value of the expression is automatically returned. This is called an implicit return.
     return `found the needle at position ${index}`;
-  }
+}
   
 //The .findIndex() method always takes a function (called a callback) as its only argument. You don’t have to use all the parameters (index, array), just the ones you need.
 
