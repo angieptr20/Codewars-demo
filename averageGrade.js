@@ -6,6 +6,8 @@
 // getAverage([1,1,1,1,1,1,1,2]),1)
 
 function getAverage(grades) {
+    if (grades.length === 0) return 0; //if the array is empty, return 0 --> edge case
+
     let total = 0;
 
     for (let i = 0; i < grades.length; i++) {
