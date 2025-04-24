@@ -20,8 +20,8 @@ function reverseWords(str) {
     //     5 => i = word.length -1 = 4 i >=0 ; i--
     
         for (let i = word.length - 1; i >= 0; i--) {
-    //       0,1,2,3
-    //       3,2,1,0
+    //instead of    0,1,2,3
+    //do            3,2,1,0
           reversedWord += word[i];
         }
         return reversedWord;

@@ -31,8 +31,8 @@ function solution(str) {
   
   for (let i = 0; i < str.length; i += 2) {
     let pair = str.slice(i, i + 2); // Extract two characters
-    if (pair.length === 1) { // If only one character exists
-      pair = pair + "_"; // Add underscore
+    if (pair.length === 1) { // If only one character exists in a pair
+      pair += "_"; // Add underscore
     }
     result.push(pair); // Push the pair into the result array
   }
@@ -51,7 +51,7 @@ function solution(str) {
   
     // Loop through the string in steps of 2
     for (let i = 0; i < str.length; i += 2) {
-      pairs.push(str[i] + str[i + 1]);
+      pairs.push(str[i] + str[i + 1]); //slice works differently --> i + 2 
     }
   
     return pairs;

@@ -18,9 +18,9 @@ For that, we need to add a method to the String prototype:
 Object.defineProperty(
     String.prototype,
     'toJadenCase',
-    { value :
+    { value :                       
      function toJadenCase() {
-          let words = this.split(' '); // Split the string into an array of words
+          let words = this.split(' '); // Split the string into an array of words -> ["most", "trees", "are", "blue"], splits the string based on spaces
           let result = []; // Create an empty array to store the modified words
   
           for (let i = 0; i < words.length; i++) {
@@ -42,6 +42,9 @@ Object.defineProperty(
 // Example usage:
 console.log("how can mirrors be real if our eyes aren't real".toJadenCase());
 // Output: "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+
+//If you use .split('') (with an empty string as the delimiter and no space), it will split every single character in the string—including spaces—into separate elements of the array. Example: ["m", "o", "s", "t", " ", "t", "r", "e", "e", "s",] 
 
 
 Object.defineProperty(

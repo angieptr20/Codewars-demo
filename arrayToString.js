@@ -26,3 +26,6 @@ function smash (words) {
   return words.join(' ') 
    
 };
+
+// .join(' ') does not add spaces at the beginning or the end of the string—only between the words—so the function correctly meets the requirement.
+

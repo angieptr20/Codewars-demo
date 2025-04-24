@@ -10,9 +10,9 @@
 
 // split method turns each character from a string into an array
 // loop over the string characters array
-// // crosss reference vowels(a, e, i, o, u) to the string input using a loop on array || regex || object
-// // comparing each character to the vowels
-// // Increment if they match
+// crosss reference vowels(a, e, i, o, u) to the string input using a loop on array || regex || object
+// comparing each character to the vowels
+// Increment if they match
 // return the count
 
 
@@ -53,7 +53,7 @@ function findVowels(str) {
   // With Regular Expression test
   let strArray = str.toLowerCase().split('');
   let vowels = {
-    a: '',
+    a: '', //better to use truthy instead of falsy like having a: true instead of ''
     e: '',
     i: '',
     o: '',
@@ -73,7 +73,7 @@ function findVowels(str) {
 console.log(findVowels('why'));
 console.log(findVowels('how many vowels are in that string'));
 
-
+//USING INCLUDES
 function findVowel(str) {
   let vowel = 'aeiouAEIOU';
   let count = 0
@@ -85,4 +85,30 @@ function findVowel(str) {
   return count;
 }
 
-console.log(findVowel('daniel') )  
+console.log(findVowel('daniel') )
+
+//TO LOWERCASE()
+function findVowels(str) {
+  let vowel = 'aeiou';
+  let count = 0;
+
+  for (let char of str) {
+    if (vowel.includes(char.toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+}
+
+
+//USING INCLUDES WITH REDUCE
+function findVowels(str) {
+  const vowels = 'aeiou';
+  return str
+    .split('')
+    .reduce((count, char) => vowels.includes(char) ? count + 1 : count, 0);
+}
+
+
+//REGEX (MATCH)
+const findVowels = str => (str.match(/[aeiou]/g) || []).length;

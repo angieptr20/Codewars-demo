@@ -31,6 +31,6 @@ function countSheeps(arrayOfSheep) {
   
   //changed from sheep
   const sheeps = [true, true, true, false, true, true, true, true, true, false, true, false, true, false, false, true, true, true, true, false, false, true, true];
-  console.log(countSheeps(sheep)); // Output: 17
+  console.log(countSheeps(sheeps)); // Output: 17
 
 // While includes alone isn't suited for counting values, filter works well here because it creates a new array containing only true values, and then .length gives the count.
