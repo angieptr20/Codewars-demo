@@ -38,4 +38,37 @@ function removeDuplicates(arr) {
       return false;
     });
 }
-  
+ 
+//BEST SOLUTION
+
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+
+const uniqueNumbers = numbers.filter((value, index) => {
+  return numbers.indexOf(value) === index;
+});
+
+console.log(uniqueNumbers); // Output: [1, 2, 3, 4, 5]
+
+/*
+How .indexOf() works inside .filter()
+- Finding the First Occurrence:
+- .indexOf(value) returns the first position where value appears in the array.
+- Checking for a Duplicate:
+- If the current index (index) matches the first occurrence index (indexOf(value)), it's the first time the element appears.
+- If index > indexOf(value), that means this instance is a duplicate.
+- Filtering Duplicates:
+- .filter() keeps only the first occurrence and removes all duplicates
+
+
+Step-by-Step Execution
+| Element (value) | First Index (indexOf(value)) | Current Index (index) | Included in New Array? 
+| 1               | 0                            | 0                     | ✅ Yes                 
+| 2               | 1                            | 1                     | ✅ Yes                 
+| 2               | 1                            | 2                     | ❌ No (Duplicate)
+| 3               | 3                            | 3                     | ✅ Yes                 
+| 4               | 4                            | 4                     | ✅ Yes                 
+| 4               | 4                            | 5                     | ❌ No (Duplicate) 
+| 5               | 6                            | 6                     | ✅ Yes 
+
+This method ensures only unique elements are kept while filtering out repeats
+*/
